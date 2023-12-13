@@ -11,10 +11,10 @@ router.post('/create-offer', (req, res) => {
      console.log(isSaved);
     res.redirect('/all-courses')
 })
-router.post('/delete/:_id',(req,res)=>{
-    const _id = req.params
-    console.log(_id);
-    res.redirect('all-courses')
+router.post('/delete/:courseId',(req,res)=>{
+    const {courseId} = req.params
+    console.log(courseId);
+    res.redirect('/all-courses')
 })
 /**
  * Моля, въведете вашата парола.
