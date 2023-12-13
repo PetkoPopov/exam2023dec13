@@ -1,9 +1,9 @@
 const bcrypt = require('bcrypt')
 const mongoose = require('mongoose')
 const userModel = mongoose.Schema({
-    username: String,
-    email:  String,
-    password:  String,
+    username: { type: String, require: true },
+    email: { type: String, require: true },
+    password: { type: String, require: true }
 })
 userModel.virtual("repeat_password").set(function (value) {
     console.log(`${value} --- ${this.password}`);

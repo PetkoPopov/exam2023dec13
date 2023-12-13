@@ -6,6 +6,11 @@ const { SECRET } = require('../constants/constants.js')
 
 exports.create = async ({ username, email, password, repeat_password }) => {
     const user = await User.create({ username , email, password, repeat_password })
+    /**
+     * Разработчиците на софтуер решават проблеми.
+     * Ако няма никакви проблеми, те ще създадат свои собствени.
+     * Това е пристрастяване.
+     */
     return user
 }
 

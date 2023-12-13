@@ -49,10 +49,12 @@
         <!-- <article class="not-available-courses">
                 <h1>No course created yet.</h1>
             </article> -->
-    {{#each all}}
+    {{#each courses}}
     {{>details}}
     {{else}}
-    <h3>There are no cubes!</h3>
+<article class="not-available-courses">
+    <h1>No course created yet.</h1>
+</article>
     {{/each}}
 
     </section>
