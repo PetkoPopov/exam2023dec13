@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="../static/css/styles.css">
-{{!-- to find folder automaticaly create STATIC folder --}}
+    {{!-- to find folder automaticaly create STATIC folder --}}
 </head>
 
 <body>
@@ -28,14 +28,16 @@
                 <!-- Guest users and Logged users -->
                 <li><a href="/">Home</a></li>
                 <li><a href="/all-courses">All Courses</a></li>
+
+                <!--For loggin users-->
+                {{#if isAuthenticated}}
+                <li><a href="/course/profile">Profile</a></li>
+                <li><a href="/course/create-offer">Create Course Offers</a></li>
+                <li><a href="/user/logout">Logout</a></li>
+                {{else}}
                 <!--For guest users-->
                 <li><a href="/user/login">Login</a></li>
                 <li><a href="/user/register">Register</a></li>
-                <!--For loggin users-->
-                {{#if isAuthenticated}}
-                <li><a href="/user/profile">Profile</a></li>
-                <li><a href="/user/create-offer">Create Course Offers</a></li>
-                <li><a href="/user/logout">Logout</a></li>
                 {{/if}}
             </ul>
         </nav>
